@@ -1,0 +1,15 @@
+p{
+	font-family: Times New Roman;
+}
+#Name{
+	font-size: 1.2em;
+}
+.topics{
+	color: blue
+}
+#contact{
+	font-size: 1.1em; font-variant: small-caps; font-style: bold; font-family: Times New Roman;
+}
+#techcontact{
+	font-variant: small-caps; font-style: bold; font-family: Times New Roman;
+}
