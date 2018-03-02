@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title></title>
+	<script lang="javascript">
+		
+		
+
+		var inputCtrl;
+
+		function Main(){
+			inputCtrl = document.getElementById("display");
+		}
+
+		function increment(){
+			inputCtrl.value++;
+		}
+		function decrement(){
+			inputCtrl.value--;
+		}
+		
+	</script>
+</head>
+<body OnLoad="Main()">
+	<button id="dec" OnClick="decrement()"> - </button>
+	<input id="display" type="number" value="0">
+	<button id="inc" OnClick="increment()"> + </button>
+</body>
+</html>

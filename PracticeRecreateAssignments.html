@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script lang="javascript">
+		
+        var arr = [];
+        
+        $().ready(function(){
+            $("#add").click(function(){
+                arr.push($("#inp").val());
+                $("#lbl").text(arr.join(", "));
+                $("#inp").val("");
+            });
+
+            $("#reverse").click(function(){
+                arr.reverse();
+                $("#lbl").text(arr.join(", "));
+            });
+            arr = [];
+        });
+	</script>
+</head>
+<body>
+    <input id="inp" type="text">
+    <label id="lbl"></label>
+    <p></p>
+    <button id="add">Add</button>
+    <button id="reverse">Display in Reverse</button>
+</body>
+</html>

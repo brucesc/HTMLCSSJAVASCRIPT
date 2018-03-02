@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script lang="javascript">
+		
+		$().ready(function(){
+
+			$("#bt1").click(function() {
+				
+				$("#lbl").text($("#inp").val().toUpperCase());
+			});
+			$("#bt2").click(function() {
+				
+				$("#lbl").text($("#inp").val().toLowerCase());
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	<button id="bt2">ToLower</button>
+	<input id="inp" type="text">
+	<button id="bt1">ToUpper</button>
+	<label id="lbl"></label>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title></title>
+	<script lang="javascript">
+		
+		var inputCtrl;
+		var labelCtrl;
+
+		function Main() { //this function is started automatically
+			inputCtrl = document.getElementById("inp");
+			labelCtrl = document.getElementById("lbl");
+		}
+
+		function ToUpper(){
+			labelCtrl.textContent = inputCtrl.value.toUpperCase();
+		}
+
+	</script>
+</head>
+<body OnLoad="Main()">
+	<input id="inp" type="text">
+	<button id="btn" OnClick="ToUpper()">ToUpper</button>
+	<label id="lbl"></label>
+</body>
+</html>

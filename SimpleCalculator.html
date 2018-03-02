@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title></title>
+	<script lang="javascript">
+		function Main() { //this function is started automatically
+		}
+		function Click() {
+			var inputCtrl = document.getElementById("inp");
+			var inputText = inputCtrl.value;
+
+			var nbr = parseInt(inputText);
+			// inputText = nbr * nbr;
+
+			var labelCtrl = document.getElementById("lbl");
+			labelCtrl.textContent = 2 * inputText;
+		}
+		function Add(){
+			var op1Ctrl = document.getElementById("op1");
+			var op1 = parseInt(op1Ctrl.value);
+
+			var op2Ctrl = document.getElementById("op2");
+			var op2 = parseInt(op2Ctrl.value);
+
+			var labelCtrl = document.getElementById("ans");
+			labelCtrl.textContent = op1 + op2;
+		}
+		function Subtract() {
+			var op1Ctrl = document.getElementById("op1");
+			var op1 = parseInt(op1Ctrl.value);
+
+			var op2Ctrl = document.getElementById("op2");
+			var op2 = parseInt(op2Ctrl.value);
+
+			var labelCtrl = document.getElementById("ans");
+			labelCtrl.textContent = op1 - op2;
+		}
+		function Multiply() {
+			var op1Ctrl = document.getElementById("op1");
+			var op1 = parseInt(op1Ctrl.value);
+
+			var op2Ctrl = document.getElementById("op2");
+			var op2 = parseInt(op2Ctrl.value);
+
+			var labelCtrl = document.getElementById("ans");
+			labelCtrl.textContent = op1 * op2;
+		}
+		function Divide() {
+			var op1Ctrl = document.getElementById("op1");
+			var op1 = parseInt(op1Ctrl.value);
+
+			var op2Ctrl = document.getElementById("op2");
+			var op2 = parseInt(op2Ctrl.value);
+
+			var labelCtrl = document.getElementById("ans");
+			labelCtrl.textContent = op1 / op2;
+		}
+		function Power() {
+			var op1Ctrl = document.getElementById("op1");
+			var op1 = parseInt(op1Ctrl.value);
+
+			var op2Ctrl = document.getElementById("op2");
+			var op2 = parseInt(op2Ctrl.value);
+
+			var labelCtrl = document.getElementById("ans");
+			labelCtrl.textContent = Math.pow(op1, op2);
+		}
+	</script>
+</head>
+<body OnLoad="Main()">
+	<input id="op1" type="text">
+	<input id="op2" type="text">
+	<label id="ans"></label>
+	<p></p>
+	<button id="add" OnClick="Add()">Add</button>
+	<button id="sub" OnClick="Subtract()">Sub</button>
+	<button id="mul" OnClick="Multiply()">Mult</button>
+	<button id="div" OnClick="Divide()">Div</button>
+	<button id="pwr" OnClick="Power()">Power</button>
+	</body>
+</html>

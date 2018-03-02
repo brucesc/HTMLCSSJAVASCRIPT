@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title></title>
+	<script lang="javascript">
+		
+		var arr = [];
+		var inpCtrl;
+		var lblCtrl;
+
+		function Main() { //this function is started automatically
+			inpCtrl = document.getElementById("inp");
+			lblCtrl	= document.getElementById("lbl");
+		}
+
+		function add() {
+			var nbr = inpCtrl.value;
+			arr.push(nbr);
+			lblCtrl.textContent = arr.join(" ");
+			inpCtrl.value = "";
+		}
+
+		function multiplyAll() {
+			var total = 1;
+			for(var nbr of arr)
+				total *= nbr;
+			lblCtrl.textContent = total;
+			arr = [];
+		}
+	</script>
+</head>
+<body OnLoad="Main()">
+	<input id="inp" type="text">
+	<button OnClick="add()">Add</button>
+	<button OnClick="multiplyAll()">Multiply all</button>
+	<label id="lbl"></label>
+</body>
+</html>

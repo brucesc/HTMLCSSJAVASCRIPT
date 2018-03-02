@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script lang="javascript">
+		
+		var arr = [];
+
+
+		$().ready(function() {
+			$("#add").click(function(){
+				var nbr = $("#inp").val();
+				arr.push(nbr);
+				$("#lbl").text(arr.join(" "));
+				$("#inp").val("");
+			});
+			$("#mult").click(function(){
+				var total = 1;
+				for(var item of arr)
+					total *= item;
+				$("#lbl").text(total);
+				arr = [];
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<input id="inp" type="text">
+	<label id="lbl"></label>
+	<p></p>
+	<button id="add">Add</button>
+	<button id="mult">MultiplyAll</button>
+</body>
+</html>
